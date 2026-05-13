@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:src="@drawable/fondooo"
+    android:scaleType="centerCrop" />
+
+<TextView
+   android:id="@+id/cant"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:text="Intento n: "
+   android:fontFamily="@font/font"
+   android:textColor="@color/black"
+   android:textSize="25sp" />
+
+<TextView
+    android:id="@+id/num"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toEndOf="@id/cant"
+    android:fontFamily="@font/font"
+    android:textColor="@color/black"
+    android:text="1"
+    android:textSize="25sp" />
+
+<TextView
+    android:id="@+id/gano"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/botones2"
+    android:text="Ganaste!!"
+    android:fontFamily="@font/font"
+    android:layout_centerInParent="true"
+    android:visibility="gone"
+    android:textColor="@color/black"
+    android:textSize="25sp"/>
+
+<TextView
+    android:id="@+id/acertados"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/noAcierto"
+    android:fontFamily="@font/font"
+    android:text="Colores acertados: "
+    android:textColor="@color/black"
+    android:textSize="25sp"/>
+<TextView
+    android:id="@+id/cantAcertados"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/noAcierto"
+    android:layout_toEndOf="@id/acertados"
+    android:textColor="@color/black"
+    android:fontFamily="@font/font"
+    android:text="0"
+    android:textSize="25sp" />
+
+
+<TextView
+    android:id="@+id/cantNoAcierto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@id/acertados"
+    android:layout_toEndOf="@id/noAcierto"
+    android:fontFamily="@font/font"
+    android:text="0"
+    android:textColor="@color/black"
+    android:textSize="25sp" />
+<TextView
+    android:id="@+id/noAcierto"
+    android:layout_width="270dp"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/font"
+    android:layout_below="@+id/cant"
+    android:text="Colores acertados en posicion incorrecta: "
+    android:textColor="@color/black"
+    android:textSize="25sp"/>
+
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/font"
+    android:text="Intento anterior:"
+    android:layout_above="@+id/anterior"
+    android:layout_centerInParent="true"
+    android:textSize="25sp"
+    android:textColor="@color/black" />
+
+<LinearLayout
+    android:id="@+id/botones1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_centerInParent="true"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/azul"
+        android:layout_gravity="center_vertical"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/azul"
+        android:scaleType="centerCrop"
+        android:background="?attr/selectableItemBackgroundBorderless" />
+
+    <ImageButton
+        android:id="@+id/verde"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/verde"
+        android:scaleType="centerCrop"
+        android:background="?attr/selectableItemBackgroundBorderless" />
+
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/botones2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_above="@+id/botones1"
+    android:layout_centerInParent="true"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/rojo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/rojo"
+        android:layout_gravity="center_vertical"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="centerCrop" />
+
+    <ImageButton
+        android:id="@+id/amarillo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/amarllo"
+        android:scaleType="centerCrop"
+        android:background="?attr/selectableItemBackgroundBorderless" />
+
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/ingreso"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/botones1"
+    android:layout_centerInParent="true"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/btn0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gris" />
+
+    <ImageView
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gris" />
+
+    <ImageView
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gris" />
+    <ImageView
+        android:id="@+id/btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gris" />
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_below="@id/ingreso"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:orientation="horizontal">
+
+<ImageButton
+    android:id="@+id/enviar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/aceptar"
+    android:scaleType="centerCrop"
+    android:background="?attr/selectableItemBackgroundBorderless" />
+
+<ImageButton
+    android:id="@+id/reiniciar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/reiniciar"
+    android:scaleType="centerCrop"
+    android:background="?attr/selectableItemBackgroundBorderless" />
+
+<ImageButton
+    android:id="@+id/eliminar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/delete"
+    android:scaleType="centerCrop"
+    android:background="?attr/selectableItemBackgroundBorderless" />
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/anterior"
+    android:layout_centerInParent="true"
+    android:layout_alignParentBottom="true">
+
+    <ImageView
+        android:id="@+id/anteriorbtn0"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/gris" />
+
+    <ImageView
+        android:id="@+id/anteriorbtn1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/gris" />
+
+    <ImageView
+        android:id="@+id/anteriorbtn2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/gris"/>
+
+    <ImageView
+        android:id="@+id/anteriorbtn3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/gris"/>
+
+</LinearLayout>
+</RelativeLayout >
