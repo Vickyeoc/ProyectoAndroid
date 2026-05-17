@@ -26,9 +26,10 @@ ProyectoAndroid/*.aab
 ProyectoAndroid/captures/
 ProyectoAndroid/.externalNativeBuild/
 ProyectoAndroid/.cxx/
+ProyectoAndroid/gradle/wrapper/gradle-wrapper.jar
 
 # IDE
-.idea/
+ProyectoAndroid/.idea/
 *.iml
 .vscode/
 *.swp

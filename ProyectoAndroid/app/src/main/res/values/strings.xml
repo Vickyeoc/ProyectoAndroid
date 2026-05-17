@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name" translatable="false">My Application</string>
+    <string name="ganar">Ganaste!!</string>
+    <string name="textoIntento">Intento n: </string>
+    <string name="cantIntento" translatable="false">1</string>
+    <string name="textoAcertados">Colores Acertados:</string>
+    <string name="cantAcertados" translatable="false">0</string>
+    <string name="textoNoAcertados">Colores acertados en posicion incorrecta:</string>
+    <string name="cantNoAcertados" translatable="false">0</string>
+    <string name="IntentoAnterior">Intento Anterior:</string>
+    <string name="Titulo">Descubrir el codigo</string>
+    <string name="usuario">Ingresar Usuario:</string>
+    <string name="ayuda">Ayuda</string>
+    <string name="nivel">Elegir dificultad:</string>
+    <string name="facil">Facil</string>
+    <string name="medio">Medio</string>
+    <string name="dificil">Dificil</string>
+</resources>
