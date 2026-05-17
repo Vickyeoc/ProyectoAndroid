@@ -16,83 +16,55 @@
     android:scaleType="centerCrop" />
 
 <TextView
+   style="@style/texts"
    android:id="@+id/cant"
-   android:layout_width="wrap_content"
-   android:layout_height="wrap_content"
-   android:text="Intento n: "
-   android:fontFamily="@font/font"
-   android:textColor="@color/black"
-   android:textSize="25sp" />
+   android:text="@string/textoIntento" />
 
 <TextView
+    style="@style/texts"
     android:id="@+id/num"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
     android:layout_toEndOf="@id/cant"
-    android:fontFamily="@font/font"
-    android:textColor="@color/black"
-    android:text="1"
-    android:textSize="25sp" />
+    android:text="@string/cantIntento" />
 
 <TextView
+    style="@style/texts"
     android:id="@+id/gano"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
     android:layout_above="@+id/botones2"
-    android:text="Ganaste!!"
-    android:fontFamily="@font/font"
+    android:text="@string/ganar"
     android:layout_centerInParent="true"
-    android:visibility="gone"
-    android:textColor="@color/black"
-    android:textSize="25sp"/>
+    android:visibility="gone"/>
 
 <TextView
+    style="@style/texts"
     android:id="@+id/acertados"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
     android:layout_below="@+id/noAcierto"
-    android:fontFamily="@font/font"
-    android:text="Colores acertados: "
-    android:textColor="@color/black"
-    android:textSize="25sp"/>
+    android:text="@string/textoAcertados" />
+
 <TextView
+    style="@style/texts"
     android:id="@+id/cantAcertados"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
     android:layout_below="@id/noAcierto"
     android:layout_toEndOf="@id/acertados"
-    android:textColor="@color/black"
-    android:fontFamily="@font/font"
-    android:text="0"
-    android:textSize="25sp" />
-
+    android:text="@string/cantAcertados" />
 
 <TextView
+    style="@style/texts"
     android:id="@+id/cantNoAcierto"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
     android:layout_above="@id/acertados"
     android:layout_toEndOf="@id/noAcierto"
-    android:fontFamily="@font/font"
-    android:text="0"
-    android:textColor="@color/black"
-    android:textSize="25sp" />
-<TextView
+    android:text="@string/cantNoAcertados" />
+
+    <TextView
+    style="@style/texts"
     android:id="@+id/noAcierto"
     android:layout_width="270dp"
-    android:layout_height="wrap_content"
-    android:fontFamily="@font/font"
     android:layout_below="@+id/cant"
-    android:text="Colores acertados en posicion incorrecta: "
-    android:textColor="@color/black"
-    android:textSize="25sp"/>
-
+    android:text="@string/textoNoAcertados" />
 
 <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    style="@style/texts"
     android:fontFamily="@font/font"
-    android:text="Intento anterior:"
+    android:text="@string/IntentoAnterior"
     android:layout_above="@+id/anterior"
     android:layout_centerInParent="true"
     android:textSize="25sp"
@@ -108,21 +80,14 @@
 
     <ImageButton
         android:id="@+id/azul"
-        android:layout_gravity="center_vertical"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:src="@drawable/azul"
-        android:scaleType="centerCrop"
-        android:background="?attr/selectableItemBackgroundBorderless" />
+        style="@style/Buttons"
+        android:src="@drawable/azul" />
 
     <ImageButton
         android:id="@+id/verde"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_gravity="center_vertical"
+        style="@style/Buttons"
         android:src="@drawable/verde"
-        android:scaleType="centerCrop"
-        android:background="?attr/selectableItemBackgroundBorderless" />
+        android:visibility="visible"/>
 
 </LinearLayout>
 
@@ -136,22 +101,19 @@
     tools:context=".MainActivity">
 
     <ImageButton
+        style="@style/Buttons"
         android:id="@+id/rojo"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:src="@drawable/rojo"
-        android:layout_gravity="center_vertical"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:scaleType="centerCrop" />
+        android:src="@drawable/rojo" />
 
     <ImageButton
         android:id="@+id/amarillo"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_gravity="center_vertical"
-        android:src="@drawable/amarllo"
-        android:scaleType="centerCrop"
-        android:background="?attr/selectableItemBackgroundBorderless" />
+        style="@style/Buttons"
+        android:src="@drawable/amarllo" />
+    <ImageButton
+        android:id="@+id/rosa"
+        style="@style/Buttons"
+        android:src="@drawable/rosa"
+        android:visibility="visible"/>
 
 </LinearLayout>
 
@@ -166,7 +128,7 @@
     <ImageView
         android:id="@+id/btn0"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="@drawable/gris" />
 
     <ImageView
@@ -180,11 +142,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/gris" />
+
     <ImageView
         android:id="@+id/btn3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/gris" />
+        android:background="@drawable/gris"
+        android:visibility="visible"/>
+
+    <ImageView
+        android:id="@+id/btn4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gris"
+        android:visibility="visible"/>
 
 </LinearLayout>
 
@@ -200,24 +171,21 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:src="@drawable/aceptar"
-    android:scaleType="centerCrop"
-    android:background="?attr/selectableItemBackgroundBorderless" />
+    style="@style/Buttons"/>
 
 <ImageButton
     android:id="@+id/reiniciar"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:src="@drawable/reiniciar"
-    android:scaleType="centerCrop"
-    android:background="?attr/selectableItemBackgroundBorderless" />
+    style="@style/Buttons" />
 
 <ImageButton
     android:id="@+id/eliminar"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:src="@drawable/delete"
-    android:scaleType="centerCrop"
-    android:background="?attr/selectableItemBackgroundBorderless" />
+    style="@style/Buttons"/>
 </LinearLayout>
 
 <LinearLayout
@@ -250,7 +218,26 @@
         android:id="@+id/anteriorbtn3"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:background="@drawable/gris"/>
+        android:background="@drawable/gris"
+        android:visibility="visible"/>
+
+    <ImageView
+        android:id="@+id/anteriorbtn4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/gris"
+        android:visibility="visible"/>
 
 </LinearLayout>
+    <ImageButton
+        android:id="@+id/ayu"
+        style="@style/Buttons"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ayuda"
+        android:layout_alignParentEnd="true"
+        >
+
+
+    </ImageButton>
 </RelativeLayout >

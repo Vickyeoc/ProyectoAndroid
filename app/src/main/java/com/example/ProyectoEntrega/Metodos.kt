@@ -3,13 +3,13 @@ package com.example.ProyectoEntrega
 import android.R
 import android.widget.ImageView
 
-fun correctos(secreto: IntArray, intento: IntArray): IntArray{
+fun correctos(secreto: IntArray, intento: IntArray, max: Int): IntArray{
         var correcto= 0
         var noCorrecto=0
         var vector= IntArray(2)
-        var secretoB = BooleanArray(4)
-        var secretoI = BooleanArray(4)
-        for (j in 0..3){
+        var secretoB = BooleanArray(max)
+        var secretoI = BooleanArray(max)
+        for (j in 0..<max){
             if (secreto[j] == intento[j]){
                 correcto++
                 secretoB[j]=true
@@ -19,9 +19,9 @@ fun correctos(secreto: IntArray, intento: IntArray): IntArray{
                 secretoI[j]=false
             }
         }
-        for (j in 0..3){
+        for (j in 0..<max){
             if(secretoI[j]==false){
-                for (n in 0..3){
+                for (n in 0..<max){
                     if(secretoB[n]==false && secreto[n]==intento[j]){
                         secretoB[n]=true
                         secretoI[j]=true
@@ -33,8 +33,8 @@ fun correctos(secreto: IntArray, intento: IntArray): IntArray{
         }
         return intArrayOf(correcto, noCorrecto)
     }
-fun reiniciarVector(vector: Array<ImageView>): Array<ImageView> {
-    for(j in 0..3){
+fun reiniciarVector(vector: Array<ImageView>, max: Int): Array<ImageView> {
+    for(j in 0..<max){
         vector[j].setImageResource(com.example.ProyectoEntrega.R.drawable.gris)
     }
     return vector;
