@@ -1,0 +1,39 @@
+# Python / Django
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.env
+*.env
+db.sqlite3
+media/
+
+# Pipenv
+.venv/
+venv/
+env/
+
+# Android / Gradle
+ProyectoAndroid/.gradle/
+ProyectoAndroid/local.properties
+ProyectoAndroid/app/build/
+ProyectoAndroid/build/
+ProyectoAndroid/*.apk
+ProyectoAndroid/*.aab
+ProyectoAndroid/captures/
+ProyectoAndroid/.externalNativeBuild/
+ProyectoAndroid/.cxx/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
