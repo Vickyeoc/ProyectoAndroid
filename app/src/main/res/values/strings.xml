@@ -3,9 +3,9 @@
     <string name="ganar">Ganaste!!</string>
     <string name="textoIntento">Intento n: </string>
     <string name="cantIntento" translatable="false">1</string>
-    <string name="textoAcertados">Colores Acertados:</string>
+    <string name="textoAcertados">Colores acertados:</string>
     <string name="cantAcertados" translatable="false">0</string>
-    <string name="textoNoAcertados">Colores acertados en posicion incorrecta:</string>
+    <string name="textoNoAcertados">Colores parcialmente acertados:</string>
     <string name="cantNoAcertados" translatable="false">0</string>
     <string name="IntentoAnterior">Intento Anterior:</string>
     <string name="Titulo">Descubrir el codigo</string>
@@ -15,4 +15,16 @@
     <string name="facil">Facil</string>
     <string name="medio">Medio</string>
     <string name="dificil">Dificil</string>
+    <string name="obj">Objetivo del juego</string>
+    <string name="objtexto">La maquina genero un codigo secreto de colores. Tu misión es adivinar cuáles son esos colores y en qué orden se encuentran .</string>
+    <string name="jugar">Como jugar</string>
+    <string name="intentoexp">Para hacer un intento, simplemente tocá los colores disponibles para ir llenando los espacios de tu fila. Cuando tengas tu combinación lista, confirmas la jugada.</string>
+    <string name="pistassig">Que significan las pistas?</string>
+    <string name="comofue">Después de cada intento, vas a recibir pistas que te indican cómo te fue:</string>
+    <string name="acer">Colores acertados: Significa que adivinaste un color y también su posición exacta.</string>
+    <string name="noacer">Colores parcialmente coorectos: Significa que adivinaste un color, pero lo pusiste en el lugar equivocado.</string>
+    <string name="hola">Hola</string>
+    <string name="carac">El nombre de usuario tiene que tener al menos 1 caracter</string>
+    <string name="noColores">Faltan colores</string>
+
 </resources>

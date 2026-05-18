@@ -17,12 +17,16 @@
 
 <TextView
    style="@style/texts"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="5dp"
    android:id="@+id/cant"
    android:text="@string/textoIntento" />
 
 <TextView
     style="@style/texts"
     android:id="@+id/num"
+    android:layout_marginTop="5dp"
+    android:layout_marginStart="5dp"
     android:layout_toEndOf="@id/cant"
     android:text="@string/cantIntento" />
 
@@ -37,28 +41,36 @@
 <TextView
     style="@style/texts"
     android:id="@+id/acertados"
-    android:layout_below="@+id/noAcierto"
+    android:layout_marginTop="5dp"
+    android:layout_marginStart="5dp"
+    android:layout_below="@id/cant"
     android:text="@string/textoAcertados" />
 
 <TextView
     style="@style/texts"
     android:id="@+id/cantAcertados"
-    android:layout_below="@id/noAcierto"
+    android:layout_below="@id/cant"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="5dp"
     android:layout_toEndOf="@id/acertados"
     android:text="@string/cantAcertados" />
 
 <TextView
     style="@style/texts"
     android:id="@+id/cantNoAcierto"
-    android:layout_above="@id/acertados"
+    android:layout_below="@id/acertados"
+    android:layout_marginTop="5dp"
+    android:layout_marginStart="5dp"
     android:layout_toEndOf="@id/noAcierto"
     android:text="@string/cantNoAcertados" />
 
     <TextView
     style="@style/texts"
     android:id="@+id/noAcierto"
-    android:layout_width="270dp"
-    android:layout_below="@+id/cant"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+    android:layout_width="wrap_content"
+    android:layout_below="@id/acertados"
     android:text="@string/textoNoAcertados" />
 
 <TextView

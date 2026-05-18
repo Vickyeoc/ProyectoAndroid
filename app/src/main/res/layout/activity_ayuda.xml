@@ -1,56 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ayuda"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/ayudafondo"
-    tools:context=".ayuda">
+    android:background="@drawable/fondoscroll"
+    tools:context=".Ayuda">
 <ImageButton
     android:id="@+id/boton"
     style="@style/Buttons"
-    android:layout_height="45dp"
-    android:layout_width="45dp"
-    android:src="@drawable/reiniciar"/>
+    android:layout_marginTop="15dp"
+    android:layout_marginStart="10dp"
+    android:layout_height="30dp"
+    android:layout_width="40dp"
+    android:src="@drawable/volverayuda"/>
     <TextView
         style="@style/texts"
+        android:textColor="#521704"
         android:layout_gravity="center"
-        android:text="Ayuda"
+        android:text="@string/ayuda"
+        android:layout_marginBottom="30dp"
         android:textSize="35sp" />
     <TextView
+        android:textColor="#521704"
         style="@style/texts"
-        android:text="Que es el codigo secreto?"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/obj"
         android:textSize="30sp" />
     <TextView
+        android:textColor="#521704"
         style="@style/texts"
-        android:layout_marginTop="10dp"
-        android:text="Es un patron de colores generado aleatoriamente que tenes que adivinar."
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/objtexto"
         android:textSize="25sp" />
     <TextView
+        android:textColor="#521704"
         style="@style/texts"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/jugar"
+        android:textSize="30sp" />
+    <TextView
+        android:textColor="#521704"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
+        style="@style/texts"
+        android:layout_marginTop="15dp"
+        android:text="@string/intentoexp"
+        android:textSize="25sp" />
+    <TextView
+        android:textColor="#521704"
+        style="@style/texts"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginTop="25dp"
-        android:text="Como ingreso un intento?"
+        android:text="@string/pistassig"
         android:textSize="30sp" />
     <TextView
+        android:textColor="#521704"
         style="@style/texts"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginTop="10dp"
-        android:text="Para ingresar un intento tenes que clickear los colores y debajo vas a poder ver el patron que estas creando para ingresar. "
+        android:text="@string/comofue"
         android:textSize="25sp" />
     <TextView
+        android:textColor="#521704"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
         style="@style/texts"
-        android:layout_marginTop="25dp"
-        android:text="Que significan las pistas?"
-        android:textSize="30sp" />
-    <TextView
-        style="@style/texts"
-        android:layout_marginTop="10dp"
-        android:text="Colores acertados: te muestra la cantidad de colores que se encuentran en la posicion correcta en tu codigo ingresado."
+        android:layout_marginTop="15dp"
+        android:text="@string/acer"
         android:textSize="25sp" />
     <TextView
+        android:textColor="#521704"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
         style="@style/texts"
-        android:layout_marginTop="10dp"
-        android:text="Colores acertados en posicion incorrecta: te muestra la cantidad de colores de el codigo que ingresaste que se encuentran en el codigo secrecto pero estan en la posicion incorrecta."
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/noacer"
         android:textSize="25sp" />
 </LinearLayout>
+    </ScrollView>

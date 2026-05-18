@@ -129,7 +129,7 @@ e.setOnClickListener {
                  retry()
                 }
              else{ vectorImagenes=reiniciarVector(vectorImagenes,max) }
-    } else { Toast.makeText(this, "Faltan colores", Toast.LENGTH_SHORT).show()} }
+    } else { Toast.makeText(this, R.string.noColores, Toast.LENGTH_SHORT).show()} }
 
 ////botones de colores
 botonRojo.setOnClickListener {
@@ -155,8 +155,8 @@ botonVerde.setOnClickListener {
 botonRosa.setOnClickListener {
    if(i<max) {
      intento[i] = 4
-       vectorImagenes[i].setImageResource(R.drawable.rosa)
-       i++ }}
+     vectorImagenes[i].setImageResource(R.drawable.rosa)
+     i++ }}
 
 
 ///boton reiniciar

@@ -46,13 +46,13 @@ dificil.setOnClickListener {
     i.putExtra("dificultad",2)
     startActivity(i) }
 aceptarNombre.setOnClickListener {
-    if(editor.textSize>1){
+    if(editor.text.isNotBlank()){
     nombre.text= editor.text.toString()
     editor.setText("")
     nombre.visibility= View.VISIBLE
     saludar.visibility=View.VISIBLE}else
     {
-        Toast.makeText(this, "El nombre de usuario tiene que tener al menos 1 caracter", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, R.string.carac, Toast.LENGTH_SHORT).show()
     }
 }
         ayuda.setOnClickListener {
