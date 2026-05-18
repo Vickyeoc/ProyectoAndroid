@@ -6,8 +6,8 @@ from juego.service.juegoSrv import JuegoSrv
 
 class GetResultadosApi(APIView):
     def post(self, request):
-        secreto = request.data.get("secreto")
-        jugado = request.data.get("jugado")
+        secreto = request.data.getlist("secreto")
+        jugado = request.data.getlist("jugado")
         acertados, parciales = JuegoSrv().get_resultado(secreto, jugado)
         data = {
             "acertados" : acertados,
