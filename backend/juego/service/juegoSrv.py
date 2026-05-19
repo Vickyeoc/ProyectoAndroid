@@ -1,5 +1,5 @@
 class JuegoSrv:
-    def get_resultado(self,secreto,jugado):
+    def get_resultado(self,secreto:list, jugado:list) -> tuple:
         acertados = parciales = 0
         jugado_procesados = []
         secreto_procesados = []
@@ -19,5 +19,5 @@ class JuegoSrv:
                     jugado_procesados[i] = True
                     secreto_procesados[j] = True
                     parciales += 1
-        return acertados,parciales
+        return (acertados,parciales)
                     
