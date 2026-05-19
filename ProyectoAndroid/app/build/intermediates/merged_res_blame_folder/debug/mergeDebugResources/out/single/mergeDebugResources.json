@@ -1,0 +1,186 @@
+[
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/drawable_inicio.png.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/drawable/inicio.png"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/drawable_delete.png.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/drawable/delete.png"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/font_newfont.ttf.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/font/newfont.ttf"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/drawable_rosa.png.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/drawable/rosa.png"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/menu_menu_popup.xml.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/menu/menu_popup.xml"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/drawable_reiniciar.png.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/drawable/reiniciar.png"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/drawable_volverayuda.png.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/drawable/volverayuda.png"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/drawable_rojo.png.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/drawable/rojo.png"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/drawable_fondoinicio.png.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/drawable/fondoinicio.png"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/drawable_ayuda.png.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/drawable/ayuda.png"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/drawable_amarilloboton.png.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/drawable/amarilloboton.png"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/drawable_fondoscroll.png.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/drawable/fondoscroll.png"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/drawable_ayudafondo.png.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/drawable/ayudafondo.png"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/drawable_facil.png.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/drawable/facil.png"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/layout_activity_ayuda.xml.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/layout/activity_ayuda.xml"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/drawable_grisescribir.png.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/drawable/grisescribir.png"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/drawable_gris.png.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/drawable/gris.png"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/drawable_amarllo.png.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/drawable/amarllo.png"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/drawable_aceptarinicio.png.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/drawable/aceptarinicio.png"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/font_font3.ttf.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/font/font3.ttf"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/drawable_aceptar.png.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/drawable/aceptar.png"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/layout_activity_main.xml.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/drawable_azul.png.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/drawable/azul.png"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/layout_activity_principal.xml.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/layout/activity_principal.xml"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/xml_backup_rules.xml.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/drawable_fondooo.png.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/drawable/fondooo.png"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/font_font.ttf.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/font/font.ttf"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/layout-land_activity_main.xml.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/layout-land/activity_main.xml"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/layout-land_activity_principal.xml.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/layout-land/activity_principal.xml"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/drawable_verde.png.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/drawable/verde.png"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.ProyectoEntrega.app-debug-35:/drawable_dificil.png.flat",
+        "source": "com.example.ProyectoEntrega.app-main-37:/drawable/dificil.png"
+    }
+]

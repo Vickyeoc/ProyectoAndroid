@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="IntentoAnterior">Intento Anterior:</string>
+    <string name="Titulo">Descubrir el codigo</string>
+    <string name="acer">Colores acertados: Significa que adivinaste un color y también su posición exacta.</string>
+    <string name="app_name" translatable="false">My Application</string>
+    <string name="ayuda">Ayuda</string>
+    <string name="cantAcertados" translatable="false">0</string>
+    <string name="cantIntento" translatable="false">1</string>
+    <string name="cantNoAcertados" translatable="false">0</string>
+    <string name="carac">El nombre de usuario tiene que tener al menos 1 caracter</string>
+    <string name="comofue">Después de cada intento, vas a recibir pistas que te indican cómo te fue:</string>
+    <string name="dificil">Dificil</string>
+    <string name="facil">Facil</string>
+    <string name="ganar">Ganaste!!</string>
+    <string name="hola">Hola</string>
+    <string name="intentoexp">Para hacer un intento, simplemente tocá los colores disponibles para ir llenando los espacios de tu fila. Cuando tengas tu combinación lista, confirmas la jugada.</string>
+    <string name="jugar">Como jugar</string>
+    <string name="medio">Medio</string>
+    <string name="nivel">Elegir dificultad:</string>
+    <string name="noColores">Faltan colores</string>
+    <string name="noacer">Colores parcialmente coorectos: Significa que adivinaste un color, pero lo pusiste en el lugar equivocado.</string>
+    <string name="obj">Objetivo del juego</string>
+    <string name="objtexto">La maquina genero un codigo secreto de colores. Tu misión es adivinar cuáles son esos colores y en qué orden se encuentran .</string>
+    <string name="pistassig">Que significan las pistas?</string>
+    <string name="textoAcertados">Colores acertados:</string>
+    <string name="textoIntento">Intento n: </string>
+    <string name="textoNoAcertados">Colores parcialmente acertados:</string>
+    <string name="usuario">Ingresar Usuario:</string>
+    <style name="Base.Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Buttons">
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">120dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+    <style name="Theme.MyApplication" parent="Base.Theme.MyApplication"/>
+    <style name="texts">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+</resources>

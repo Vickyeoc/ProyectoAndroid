@@ -1,0 +1,7 @@
+com.example.ProyectoEntrega.app-pngs-0 C:\Users\vicku\AndroidStudioProjects\MyApplication3\ProyectoAndroid\app\build\generated\res\pngs\debug
+com.example.ProyectoEntrega.app-updated_navigation_xml-1 C:\Users\vicku\AndroidStudioProjects\MyApplication3\ProyectoAndroid\app\build\generated\updated_navigation_xml\debug
+com.example.ProyectoEntrega.app-packageDebugResources-2 C:\Users\vicku\AndroidStudioProjects\MyApplication3\ProyectoAndroid\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.ProyectoEntrega.app-packageDebugResources-3 C:\Users\vicku\AndroidStudioProjects\MyApplication3\ProyectoAndroid\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.ProyectoEntrega.app-debug-4 C:\Users\vicku\AndroidStudioProjects\MyApplication3\ProyectoAndroid\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.example.ProyectoEntrega.app-debug-5 C:\Users\vicku\AndroidStudioProjects\MyApplication3\ProyectoAndroid\app\src\debug\res
+com.example.ProyectoEntrega.app-main-6 C:\Users\vicku\AndroidStudioProjects\MyApplication3\ProyectoAndroid\app\src\main\res

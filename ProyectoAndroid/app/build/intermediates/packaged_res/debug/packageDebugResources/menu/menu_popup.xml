@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/opcion_volver"
+        android:title="Inicio" />
+
+    <item
+        android:id="@+id/opcion_ayuda"
+        android:title="Ayuda" />
+</menu>

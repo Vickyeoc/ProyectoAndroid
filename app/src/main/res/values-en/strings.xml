@@ -21,6 +21,6 @@
     <string name="acer">Correct colors: This means you guessed a color and also its exact position.</string>
     <string name="noacer">Partially correct colors: This means you guessed a color, but you put it in the wrong place.</string>
     <string name="hola">Hello</string>
-    <string name="carac">The user name needs at least one character</string>
+    <string name="carac">The username needs at least one character</string>
     <string name="noColores">There is colors missing</string>
 </resources>

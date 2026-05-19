@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/incio"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/titulo"
+        style="@style/texts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Titulo"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.542" />
+
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/texts"
+        android:text="Hola"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.353"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/nombre"
+        style="@style/texts"
+        android:text="x"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        style="@style/Buttons"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:src="@drawable/inicio"
+        app:layout_constraintBottom_toTopOf="@+id/AyudaBoton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/aceptarInicio"
+        style="@style/Buttons"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/aceptarinicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageButton2"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageButton2" />
+
+    <ImageButton
+        android:id="@+id/AyudaBoton"
+        style="@style/Buttons"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="104dp"
+        android:src="@drawable/inicio"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editText"
+        style="@style/texts"
+        android:fontFamily="@font/font"
+        android:hint="@string/usuario"
+        android:maxLength="10"
+        android:textColorHint="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton2"
+        app:layout_constraintStart_toStartOf="@+id/imageButton2"
+        app:layout_constraintTop_toTopOf="@+id/imageButton2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/texts"
+        android:text="@string/ayuda"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/AyudaBoton"
+        app:layout_constraintEnd_toEndOf="@+id/AyudaBoton"
+        app:layout_constraintStart_toStartOf="@+id/AyudaBoton"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+
+    <TextView
+
+        android:id="@+id/textView"
+        style="@style/texts"
+        android:layout_marginTop="32dp"
+        android:text="@string/nivel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/AyudaBoton" />
+
+    <ImageButton
+        android:id="@+id/facil"
+        style="@style/Buttons"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:src="@drawable/facil"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/medio"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.957" />
+
+    <ImageButton
+        android:id="@+id/medio"
+        style="@style/Buttons"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:src="@drawable/amarilloboton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dificil"
+        app:layout_constraintStart_toEndOf="@+id/facil"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.957" />
+
+    <ImageButton
+        android:id="@+id/dificil"
+        style="@style/Buttons"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:src="@drawable/dificil"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/medio"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.957" />
+
+    <ImageButton
+        android:id="@+id/aceptar"
+        style="@style/Buttons"
+        android:visibility="gone"
+        android:layout_width="150dp"
+        android:layout_height="44dp"
+        android:src="@drawable/inicio"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medio"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/texts"
+        android:text="@string/facil"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/facil"
+        app:layout_constraintEnd_toEndOf="@+id/facil"
+        app:layout_constraintStart_toStartOf="@+id/facil"
+        app:layout_constraintTop_toTopOf="@+id/facil" />
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/texts"
+        android:text="@string/medio"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/medio"
+        app:layout_constraintEnd_toEndOf="@+id/medio"
+        app:layout_constraintStart_toEndOf="@+id/facil"
+        app:layout_constraintTop_toTopOf="@+id/medio" />
+
+    <TextView
+        style="@style/texts"
+        android:text="@string/dificil"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/dificil"
+        app:layout_constraintEnd_toEndOf="@+id/dificil"
+        app:layout_constraintStart_toEndOf="@+id/medio"
+        app:layout_constraintTop_toTopOf="@+id/dificil" />
+</androidx.constraintlayout.widget.ConstraintLayout>
