@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ganar">You win!</string>
+    <string name="textoIntento">Attempt number:</string>
+    <string name="textoAcertados">Correct colors:</string>
+    <string name="textoNoAcertados">Partially correct colors:</string>
+    <string name="IntentoAnterior">Previous attempt:</string>
+    <string name="Titulo">Find the code</string>
+    <string name="usuario">Log in:</string>
+    <string name="ayuda">Help</string>
+    <string name="nivel">Choose difficulty:</string>
+    <string name="facil">Easy</string>
+    <string name="medio">Mid</string>
+    <string name="dificil">Hard</string>
+    <string name="obj">Game objective</string>
+    <string name="objtexto">The machine generated a secret color code. Your mission is to guess what those colors are and in what order they appear.</string>
+    <string name="jugar">How to play</string>
+    <string name="intentoexp">To enter an attempt, simply tap the available colors to fill the spaces in the row below them. When you have your combination ready, confirm the play.</string>
+    <string name="pistassig">"What do the "</string>
+    <string name="comofue">After each attempt, you will receive clues that tell you how you did:</string>
+    <string name="acer">Correct colors: This means you guessed a color and also its exact position.</string>
+    <string name="noacer">Partially correct colors: This means you guessed a color, but you put it in the wrong place.</string>
+    <string name="hola">Hello</string>
+    <string name="carac">The user name needs at least one character</string>
+    <string name="noColores">There is colors missing</string>
+</resources>
