@@ -1,0 +1,12 @@
+# Archivos de configuración local y carpetas temporales
+.idea/
+.gradle/
+build/
+local.properties
+*.iml
+
+# Archivos de Mac (por si tu compañero usa una)
+.DS_Store
+
+# Archivos de compilación
+/app/build/
