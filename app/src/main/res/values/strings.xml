@@ -26,5 +26,6 @@
     <string name="hola">Hola</string>
     <string name="carac">El nombre de usuario tiene que tener al menos 1 caracter</string>
     <string name="noColores">Faltan colores</string>
+    <string name="inicio">Volver al inicio</string>
 
 </resources>

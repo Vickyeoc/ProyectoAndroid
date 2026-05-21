@@ -10,10 +10,9 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
+        android:src="@drawable/landnubes"
         android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:scaleType="centerCrop" />
 
     <TextView
         android:id="@+id/titulo"
