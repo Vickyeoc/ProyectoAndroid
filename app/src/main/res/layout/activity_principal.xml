@@ -44,7 +44,7 @@
     <TextView
         android:id="@+id/nombre"
         style="@style/texts"
-        android:text="x"
+        android:text=""
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/imageButton2"
         app:layout_constraintEnd_toEndOf="parent"

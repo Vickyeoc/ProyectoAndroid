@@ -30,7 +30,7 @@
     <TextView
         android:id="@+id/textView5"
         style="@style/texts"
-        android:text="Hola"
+        android:text="@string/hola"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/imageButton2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,7 +42,7 @@
     <TextView
         android:id="@+id/nombre"
         style="@style/texts"
-        android:text="x"
+        android:text=""
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/imageButton2"
         app:layout_constraintEnd_toEndOf="parent"

@@ -11,6 +11,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+var texto=String()
+var b= false
 
 class PrincipalActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,6 +32,7 @@ val aceptarNombre= findViewById<ImageButton>(R.id.aceptarInicio)
 val nombre= findViewById<TextView>(R.id.nombre)
 val saludar =findViewById<TextView>(R.id.textView5)
 val ayuda =findViewById<ImageButton>(R.id.AyudaBoton)
+b= false
 
 medio.setOnClickListener {
    val i= Intent(this, MainActivity::class.java)
@@ -47,10 +50,12 @@ dificil.setOnClickListener {
     startActivity(i) }
 aceptarNombre.setOnClickListener {
     if(editor.text.isNotBlank()){
+    texto=editor.text.toString()
     nombre.text= editor.text.toString()
     editor.setText("")
     nombre.visibility= View.VISIBLE
-    saludar.visibility=View.VISIBLE}else
+    saludar.visibility=View.VISIBLE
+    b=true}else
     {
         Toast.makeText(this, R.string.carac, Toast.LENGTH_SHORT).show()
     }
@@ -59,5 +64,20 @@ aceptarNombre.setOnClickListener {
             val i=Intent(this, Ayuda::class.java)
             startActivity(i)
         }
+
+    }
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString("texto", texto)
+        outState.putBoolean("vista", b)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        b=savedInstanceState.getBoolean("vista")
+        findViewById<TextView>(R.id.nombre).text= savedInstanceState.getString("texto")
+        if(b) {
+            findViewById<TextView>(R.id.nombre).visibility= View.VISIBLE
+            findViewById<TextView>(R.id.textView5).visibility=View.VISIBLE}
     }
 }
