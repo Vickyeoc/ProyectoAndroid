@@ -34,20 +34,35 @@ val saludar =findViewById<TextView>(R.id.textView5)
 val ayuda =findViewById<ImageButton>(R.id.AyudaBoton)
 b= false
 
+
 medio.setOnClickListener {
-   val i= Intent(this, MainActivity::class.java)
-    i.putExtra("dificultad",1)
-    startActivity(i) }
+    if(b){
+        val i= Intent(this, MainActivity::class.java)
+        i.putExtra("dificultad",1)
+        startActivity(i)
+    }else {Toast.makeText(this, "Debe ingresar un nombre de usuario para poder jugar", Toast.LENGTH_SHORT).show()
+    }
+}
 
 facil.setOnClickListener {
-    val i= Intent(this, MainActivity::class.java)
-    i.putExtra("dificultad",0)
-    startActivity(i) }
-
+    if (b) {
+        val i = Intent(this, MainActivity::class.java)
+        i.putExtra("dificultad", 0)
+        startActivity(i)
+    }else{Toast.makeText(this, "Debe ingresar un nombre de usuario para poder jugar", Toast.LENGTH_SHORT).show()
+        }
+}
 dificil.setOnClickListener {
-    val i= Intent(this, MainActivity::class.java)
-    i.putExtra("dificultad",2)
-    startActivity(i) }
+    if(b) {
+        val i = Intent(this, MainActivity::class.java)
+        i.putExtra("dificultad", 2)
+        startActivity(i)
+    }else{Toast.makeText(this, "Debe ingresar un nombre de usuario para poder jugar", Toast.LENGTH_SHORT).show()
+        }}
+
+
+
+
 aceptarNombre.setOnClickListener {
     if(editor.text.isNotBlank()){
     texto=editor.text.toString()
