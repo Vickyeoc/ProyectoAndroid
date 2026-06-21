@@ -2,6 +2,7 @@ package com.example.ProyectoEntrega
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.view.View
 import android.widget.ImageButton
 import android.widget.ImageView
@@ -15,224 +16,207 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.isVisible
 
 class MainActivity : AppCompatActivity() {
-    var cant=1
-    var codigoSecreto= IntArray(4){ (0..3).random() }
-    var intento=IntArray(4){(-1)}
-    var correcto=0
-    var noCorrecto=0
-    var i =0
-    var max= 0
+    var cant = 1
+    var codigoSecreto = IntArray(4) { (0..3).random() }
+    var intento = IntArray(5) { (-1) }
+    var correcto = 0
+    var noCorrecto = 0
+    var i = 0
+    var max = 0
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    enableEdgeToEdge()
+    setContentView(R.layout.activity_main)
+    ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+        v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+        insets}
 
-//variables
-        val botonRojo = findViewById<ImageButton>(R.id.rojo)
-        val botonRosa = findViewById<ImageButton>(R.id.rosa)
-        val botonAzul = findViewById<ImageButton>(R.id.azul)
-        val botonVerde = findViewById<ImageButton>(R.id.verde)
-        val botonAmarillo = findViewById<ImageButton>(R.id.amarillo)
-        val gano = findViewById<TextView>(R.id.gano)
-        val e = findViewById<ImageButton>(R.id.enviar)
-        val borrar = findViewById<ImageButton>(R.id.eliminar)
-        val reiniciar = findViewById<ImageButton>(R.id.reiniciar)
-        val ayuda = findViewById<ImageButton>(R.id.ayu)
-//Creo vector de imagenes
-        var vectorImagenes = arrayOf(
-            findViewById<ImageView>(R.id.btn0),
-            findViewById<ImageView>(R.id.btn1),
-            findViewById<ImageView>(R.id.btn2),
-            findViewById<ImageView>(R.id.btn3),
-            findViewById<ImageView>(R.id.btn4)
-        )
-        var vectorAnterior = arrayOf(
-            findViewById<ImageView>(R.id.anteriorbtn0),
-            findViewById<ImageView>(R.id.anteriorbtn1),
-            findViewById<ImageView>(R.id.anteriorbtn2),
-            findViewById<ImageView>(R.id.anteriorbtn3),
-            findViewById<ImageView>(R.id.anteriorbtn4)
-        )
-        //////////////////////////
-        val extras = intent.extras
-        val nivel = extras?.getInt("dificultad")
-        if (nivel == 0) {
-            max = 3
-            botonVerde.visibility = View.GONE
+//CONSTANTES Y VARIABLES
+    val botonRojo = findViewById<ImageButton>(R.id.rojo)
+    val botonRosa = findViewById<ImageButton>(R.id.rosa)
+    val botonAzul = findViewById<ImageButton>(R.id.azul)
+    val botonVerde = findViewById<ImageButton>(R.id.verde)
+    val botonAmarillo = findViewById<ImageButton>(R.id.amarillo)
+    val gano = findViewById<TextView>(R.id.gano)
+    val e = findViewById<ImageButton>(R.id.enviar)
+    val borrar = findViewById<ImageButton>(R.id.eliminar)
+    val reiniciar = findViewById<ImageButton>(R.id.reiniciar)
+    val ayuda = findViewById<ImageButton>(R.id.ayu)
+    val tiempo = findViewById<TextView>(R.id.tiempo)
+    val nombre = findViewById<TextView>(R.id.nombre)
+
+//VECTORES DE IMAGENES, VECTOR PARA VER EL INTENTO ACTUAL Y VECTOR PARA VER EL INTENTO ANTERIOR.
+    var vectorImagenes = arrayOf(
+        findViewById<ImageView>(R.id.btn0),
+        findViewById<ImageView>(R.id.btn1),
+        findViewById<ImageView>(R.id.btn2),
+        findViewById<ImageView>(R.id.btn3),
+        findViewById<ImageView>(R.id.btn4))
+    var vectorAnterior = arrayOf(
+        findViewById<ImageView>(R.id.anteriorbtn0),
+        findViewById<ImageView>(R.id.anteriorbtn1),
+        findViewById<ImageView>(R.id.anteriorbtn2),
+        findViewById<ImageView>(R.id.anteriorbtn3),
+        findViewById<ImageView>(R.id.anteriorbtn4))
+
+
+//////BOTONES QUE SE VEN SEGUN LA DIFICULTAD INGRESADA, 0= FACIL, 1= MEDIO, 2=DIFICIL.
+
+    var t: Int
+    val extras = intent.extras
+    val nivel = extras?.getInt("dificultad")
+    val n=extras?.getString("nombre")
+    nombre.text = n.toString()
+    if (nivel == 0) {
+        max = 3
+        t = 20
+
+        botonVerde.visibility = View.GONE
+        botonRosa.visibility = View.GONE
+        vectorAnterior[3].visibility = View.GONE
+        vectorAnterior[4].visibility = View.GONE
+        vectorImagenes[3].visibility = View.GONE
+        vectorImagenes[4].visibility = View.GONE
+        codigoSecreto = IntArray(3) { (0..2).random() }}
+    else {
+        if (nivel == 1) {
+            max = 4
+            t = 25
+            botonVerde.visibility = View.VISIBLE
             botonRosa.visibility = View.GONE
-            vectorAnterior[3].visibility = View.GONE
+            vectorAnterior[3].visibility = View.VISIBLE
             vectorAnterior[4].visibility = View.GONE
-            vectorImagenes[3].visibility = View.GONE
+            vectorImagenes[3].visibility = View.VISIBLE
             vectorImagenes[4].visibility = View.GONE
-            codigoSecreto = IntArray(3) {
-                (0..2).random()
-            }
-
-        } else {
-            if (nivel == 1) {
-                max = 4
-                botonVerde.visibility = View.VISIBLE
-                botonRosa.visibility = View.GONE
-                vectorAnterior[3].visibility = View.VISIBLE
-                vectorAnterior[4].visibility = View.GONE
-                vectorImagenes[3].visibility = View.VISIBLE
-                vectorImagenes[4].visibility = View.GONE
-                codigoSecreto = IntArray(4) { (0..3).random() }
-            } else {
-                max = 5
-                botonVerde.visibility = View.VISIBLE
-                botonRosa.visibility = View.VISIBLE
-                vectorAnterior[3].visibility = View.VISIBLE
-                vectorAnterior[4].visibility = View.VISIBLE
-                vectorImagenes[3].visibility = View.VISIBLE
-                vectorImagenes[4].visibility = View.VISIBLE
-                codigoSecreto = IntArray(5) { (0..4).random() }
-            }
+            codigoSecreto = IntArray(4) { (0..3).random() }}
+        else {
+            max = 5
+            t = 30
+            botonVerde.visibility = View.VISIBLE
+            botonRosa.visibility = View.VISIBLE
+            vectorAnterior[3].visibility = View.VISIBLE
+            vectorAnterior[4].visibility = View.VISIBLE
+            vectorImagenes[3].visibility = View.VISIBLE
+            vectorImagenes[4].visibility = View.VISIBLE
+            codigoSecreto = IntArray(5) { (0..4).random() } }
         }
-        var intento = IntArray(max) { (-1) }
+        tiempo.text = "00:$t"
 
-        //funcion para reiniciar
-        fun retry() {
-            cant = 1
-            i = 0
-            vectorImagenes = reiniciarVector(vectorImagenes, max)
-            vectorAnterior = reiniciarVector(vectorAnterior, max)
-            findViewById<TextView>(R.id.cantAcertados).text = 0.toString()
-            findViewById<TextView>(R.id.num).text = cant.toString()
-            findViewById<TextView>(R.id.cantNoAcierto).text = 0.toString()
-            codigoSecreto = IntArray(max) { (0..<max).random() }
-            intento = IntArray(max) { (-1) }
+///// INICIO EL TEMPORIZADOR SEGUN LA DIFICULTAD (T = TIEMPO X DIFICULTAD).
 
+    var segs = t * 1000L
+    val temporizador = object : CountDownTimer(segs, 1000) {
+        override fun onTick(tiempoRestanteEnMilis: Long) {
+            val segundosRestantes = tiempoRestanteEnMilis / 1000
+            tiempo.text = "00:$segundosRestantes"}
+        override fun onFinish() {
+            tiempo.text = "¡Tiempo terminado!"}
         }
 
-//boton envio
-        e.setOnClickListener {
-            correcto = 0
-            noCorrecto = 0
-            if (i == max) {
-                if (gano.isVisible) {
-                    gano.visibility = View.GONE
-                }
-                cant++
-                i = 0
-                for (j in 0..<max) {
-                    vectorAnterior[j].setImageDrawable(vectorImagenes[j].drawable)
-                }
-                correcto = correctos(codigoSecreto, intento, max)[0]
-                noCorrecto = correctos(codigoSecreto, intento, max)[1]
-                findViewById<TextView>(R.id.num).text = cant.toString()
-                findViewById<TextView>(R.id.cantAcertados).text = correcto.toString()
-                findViewById<TextView>(R.id.cantNoAcierto).text = noCorrecto.toString()
-                if (correcto == max) {
-                    gano.visibility = View.VISIBLE
-                    retry()
-                } else {
-                    vectorImagenes = reiniciarVector(vectorImagenes, max)
-                }
-            } else {
-                Toast.makeText(this, R.string.noColores, Toast.LENGTH_SHORT).show()
-            }
-        }
+//FUNCION PARA REINICIAR TOD0.
+fun retry() {
+    cant = 1
+    i = 0
+    vectorImagenes = reiniciarVector(vectorImagenes, max)
+    vectorAnterior = reiniciarVector(vectorAnterior, max)
+    findViewById<TextView>(R.id.cantAcertados).text = 0.toString()
+    findViewById<TextView>(R.id.num).text = cant.toString()
+    findViewById<TextView>(R.id.cantNoAcierto).text = 0.toString()
+    codigoSecreto = IntArray(max) { (0..<max).random() }
+    intento = IntArray(max) { (-1) }
+    tiempo.text = "00:$t"}
 
-////botones de colores
-        botonRojo.setOnClickListener {
-            if (i < max) {
-                intento[i] = 0
-                vectorImagenes[i].setImageResource(R.drawable.rojo)
-                i++
-            }
-        }
-        botonAmarillo.setOnClickListener {
-            if (i < max) {
-                intento[i] = 1
-                vectorImagenes[i].setImageResource(R.drawable.amarllo)
-                i++
-            }
-        }
-        botonAzul.setOnClickListener {
-            if (i < max) {
-                intento[i] = 2
-                vectorImagenes[i].setImageResource(R.drawable.azul)
-                i++
-            }
-        }
-        botonVerde.setOnClickListener {
-            if (i < max) {
-                intento[i] = 3
-                vectorImagenes[i].setImageResource(R.drawable.verde)
-                i++
-            }
-        }
-        botonRosa.setOnClickListener {
-            if (i < max) {
-                intento[i] = 4
-                vectorImagenes[i].setImageResource(R.drawable.rosa)
-                i++
-            }
-        }
+//BOTON ENVIAR
+e.setOnClickListener {
+    correcto = 0
+    noCorrecto = 0
+    if (cant == 1) {temporizador.start()}// SI ES EL PRIMER INTENTO REINICIA TEMPORIZADOR
+    if (i == max) {
+        if (gano.isVisible) {gano.visibility = View.GONE }
 
+        cant++
+        i = 0
 
-///boton reiniciar
-        reiniciar.setOnClickListener {
-            retry()
-            if (gano.isVisible) {
-                gano.visibility = View.GONE
-            }
-        }
+        for (j in 0..<max) {vectorAnterior[j].setImageDrawable(vectorImagenes[j].drawable)}
 
-//boton eliminar
-        borrar.setOnClickListener {
-            if (i > 0) {
-                i = i - 1
-                vectorImagenes[i].setImageResource(R.drawable.gris)
-            }
-        }
-        //////////////////////
-
-        ayuda.setOnClickListener {
-            val vista=layoutInflater.inflate(R.layout.popup,null)
-            val pop = AlertDialog.Builder(this)
-            pop.setView(vista)
-            val mipopup=pop.create()
-                vista.findViewById<TextView>(R.id.inicio).setOnClickListener{
-                    finish()
-                    mipopup.dismiss()
-                }
-            vista.findViewById<TextView>(R.id.abrirayuda).setOnClickListener{
-                val i= Intent(this,Ayuda::class.java)
-                startActivity(i)
-                mipopup.dismiss()
-            }
-            mipopup.show()
-        }
-    }
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        outState.putInt("i",i)
-        outState.putInt("cant",cant)
-        outState.putInt("correcto",correcto)
-        outState.putInt("noCorrecto",noCorrecto)
-        outState.putIntArray("codigoSecreto", codigoSecreto)
-        outState.putIntArray("intento", intento)
-    }
-
-    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        super.onRestoreInstanceState(savedInstanceState)
-        i=savedInstanceState.getInt("i")
-        cant=savedInstanceState.getInt("cant")
-        correcto=savedInstanceState.getInt("correcto")
-        noCorrecto=savedInstanceState.getInt("noCorrecto")
-        codigoSecreto= savedInstanceState.getIntArray("codigoSecreto")!!
-        intento= savedInstanceState.getIntArray("intento")!!
-        findViewById<TextView>(R.id.cantAcertados).text = correcto.toString()
+        correcto = correctos(codigoSecreto, intento, max)[0]
+        noCorrecto = correctos(codigoSecreto, intento, max)[1]
         findViewById<TextView>(R.id.num).text = cant.toString()
+        findViewById<TextView>(R.id.cantAcertados).text = correcto.toString()
         findViewById<TextView>(R.id.cantNoAcierto).text = noCorrecto.toString()
-    }}
+
+        if (correcto == max) {
+            temporizador.cancel()
+            gano.visibility = View.VISIBLE
+            retry()}
+        else
+            {vectorImagenes = reiniciarVector(vectorImagenes, max) }
+
+        } else { Toast.makeText(this, R.string.noColores, Toast.LENGTH_SHORT).show() }}
+
+////BOTONES DE COLORES
+
+    botonRojo.setOnClickListener {
+        if (i < max) {
+            intento[i] = 0
+            vectorImagenes[i].setImageResource(R.drawable.rojo)
+            i++}}
+
+    botonAmarillo.setOnClickListener {
+        if (i < max) {
+            intento[i] = 1
+            vectorImagenes[i].setImageResource(R.drawable.amarllo)
+            i++ }}
+
+    botonAzul.setOnClickListener {
+        if (i < max) {
+            intento[i] = 2
+            vectorImagenes[i].setImageResource(R.drawable.azul)
+            i++}}
+
+    botonVerde.setOnClickListener {
+        if (i < max) {
+            intento[i] = 3
+            vectorImagenes[i].setImageResource(R.drawable.verde)
+            i++ }}
+
+    botonRosa.setOnClickListener {
+        if (i < max) {
+            intento[i] = 4
+            vectorImagenes[i].setImageResource(R.drawable.rosa)
+            i++ } }
+
+///BOTON DE REINICIO DEL JUEGO.
+    reiniciar.setOnClickListener {
+        retry()
+        if (gano.isVisible) {
+            gano.visibility = View.GONE}}
+
+//BOTON PARA ELIMINAR UN COLOR.
+    borrar.setOnClickListener {
+        if (i > 0) {
+            i -= 1
+            vectorImagenes[i].setImageResource(R.drawable.gris)}}
+
+//////BOTON DE AYUDA PARA VOLVER AL LA PANTALLA PRINCIPAL O IR A PANTALLA AYUDA.
+
+ayuda.setOnClickListener {
+    val vista = layoutInflater.inflate(R.layout.popup, null)
+    val pop = AlertDialog.Builder(this)
+    pop.setView(vista)
+    val mipopup = pop.create()
+    vista.findViewById<TextView>(R.id.inicio).setOnClickListener {
+        finish()
+        temporizador.cancel()
+        mipopup.dismiss() }
+    vista.findViewById<TextView>(R.id.abrirayuda).setOnClickListener {
+        val i = Intent(this, Ayuda::class.java)
+        startActivity(i)
+        mipopup.dismiss() }
+    mipopup.show()}
 
 
+    }
+}

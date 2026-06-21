@@ -24,6 +24,8 @@ class PrincipalActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+/// CONSTANTES
 val medio= findViewById<ImageButton>(R.id.medio)
 val facil=findViewById<ImageButton>(R.id.facil)
 val dificil =findViewById<ImageButton>(R.id.dificil)
@@ -34,65 +36,65 @@ val saludar =findViewById<TextView>(R.id.textView5)
 val ayuda =findViewById<ImageButton>(R.id.AyudaBoton)
 b= false
 
-
+/// BOTONES DE DIFICULTAS, SOLO SE ACCEDE SI SE INGRESO UN NUMBRE DE FORMA CORRECTA
 medio.setOnClickListener {
     if(b){
         val i= Intent(this, MainActivity::class.java)
         i.putExtra("dificultad",1)
+        i.putExtra("nombre", texto)
         startActivity(i)
-    }else {Toast.makeText(this, "Debe ingresar un nombre de usuario para poder jugar", Toast.LENGTH_SHORT).show()
-    }
+    }else {Toast.makeText(this, "Debe ingresar un nombre de usuario para poder jugar", Toast.LENGTH_SHORT).show() }
 }
 
 facil.setOnClickListener {
-    if (b) {
+    if (b){
         val i = Intent(this, MainActivity::class.java)
         i.putExtra("dificultad", 0)
-        startActivity(i)
-    }else{Toast.makeText(this, "Debe ingresar un nombre de usuario para poder jugar", Toast.LENGTH_SHORT).show()
-        }
+        i.putExtra("nombre", texto)
+        startActivity(i)}
+    else{Toast.makeText(this, "Debe ingresar un nombre de usuario para poder jugar", Toast.LENGTH_SHORT).show() }
 }
 dificil.setOnClickListener {
     if(b) {
         val i = Intent(this, MainActivity::class.java)
         i.putExtra("dificultad", 2)
-        startActivity(i)
-    }else{Toast.makeText(this, "Debe ingresar un nombre de usuario para poder jugar", Toast.LENGTH_SHORT).show()
-        }}
+        i.putExtra("nombre", texto)
+        startActivity(i)}
+    else{Toast.makeText(this, "Debe ingresar un nombre de usuario para poder jugar", Toast.LENGTH_SHORT).show() }}
 
 
 
-
+/// ENVIAR NOMBRE INGRESADO
 aceptarNombre.setOnClickListener {
     if(editor.text.isNotBlank()){
-    texto=editor.text.toString()
-    nombre.text= editor.text.toString()
-    editor.setText("")
-    nombre.visibility= View.VISIBLE
-    saludar.visibility=View.VISIBLE
-    b=true}else
-    {
-        Toast.makeText(this, R.string.carac, Toast.LENGTH_SHORT).show()
-    }
-}
-        ayuda.setOnClickListener {
-            val i=Intent(this, Ayuda::class.java)
-            startActivity(i)
-        }
+        texto=editor.text.toString()
+        nombre.text= texto
+        editor.setText("")
+        nombre.visibility= View.VISIBLE
+        saludar.visibility=View.VISIBLE
+        b=true }
+    else {Toast.makeText(this, R.string.carac, Toast.LENGTH_SHORT).show() } }
 
-    }
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        outState.putString("texto", texto)
-        outState.putBoolean("vista", b)
+/// BOTON DE AYUDA, TE LLEVA A LA PANTALLA DE AYUDA
+ayuda.setOnClickListener {
+    val i=Intent(this, Ayuda::class.java)
+    startActivity(i) }
     }
 
-    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        super.onRestoreInstanceState(savedInstanceState)
-        b=savedInstanceState.getBoolean("vista")
-        findViewById<TextView>(R.id.nombre).text= savedInstanceState.getString("texto")
-        if(b) {
-            findViewById<TextView>(R.id.nombre).visibility= View.VISIBLE
-            findViewById<TextView>(R.id.textView5).visibility=View.VISIBLE}
+/// SE GUARDAN LAS VARIABLES
+override fun onSaveInstanceState(outState: Bundle) {
+    super.onSaveInstanceState(outState)
+    outState.putString("texto", texto)
+    outState.putBoolean("vista", b)
+    }
+
+/// SE RESTAURAN LAS VARIABLES
+override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+    super.onRestoreInstanceState(savedInstanceState)
+    b=savedInstanceState.getBoolean("vista")
+    findViewById<TextView>(R.id.nombre).text= savedInstanceState.getString("texto")
+    if(b) {
+        findViewById<TextView>(R.id.nombre).visibility= View.VISIBLE
+        findViewById<TextView>(R.id.textView5).visibility=View.VISIBLE}
     }
 }

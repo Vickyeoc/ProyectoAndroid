@@ -16,6 +16,19 @@
     android:scaleType="centerCrop" />
 
 <TextView
+    android:id="@+id/nombre"
+    style="@style/texts"
+    android:text="nombre"
+    android:layout_above="@id/tiempo"
+    android:layout_centerInParent="true"/>
+<TextView
+    android:id="@+id/tiempo"
+    style="@style/texts"
+    android:text="00:30"
+    android:layout_above="@id/botones2"
+    android:layout_centerInParent="true"
+    />
+<TextView
    style="@style/texts"
     android:layout_marginStart="5dp"
     android:layout_marginTop="5dp"
@@ -33,7 +46,7 @@
 <TextView
     style="@style/texts"
     android:id="@+id/gano"
-    android:layout_above="@+id/botones2"
+    android:layout_above="@+id/nombre"
     android:text="@string/ganar"
     android:layout_centerInParent="true"
     android:visibility="gone"/>

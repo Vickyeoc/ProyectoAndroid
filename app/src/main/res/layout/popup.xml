@@ -2,41 +2,43 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="@drawable/pop"
+    android:background="@drawable/fondopopup"
     android:orientation="vertical"
     android:layout_height="wrap_content">
-<TextView
-    style="@style/texts"
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:textSize="30dp"
-    android:text="Menu"
-    android:layout_marginTop="15dp"
-    android:textColor="#521704"
-    android:layout_gravity="center"/>
-<TextView
-    android:textColor="#521704"
-    android:background="?attr/selectableItemBackground"
-    android:clickable="true"
-    android:focusable="true"
-    android:id="@+id/inicio"
-    android:layout_marginTop="15dp"
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    style="@style/texts"
-    android:text="@string/inicio"
-    android:layout_gravity="center" />
+    <TextView
+        style="@style/texts"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textSize="35dp"
+        android:text="Menu"
+        android:layout_marginTop="35dp"
+        android:textColor="#521704"
+        android:layout_gravity="center"/>
     <TextView
         android:textColor="#521704"
         android:background="?attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true"
+        android:id="@+id/inicio"
+        android:textSize="25sp"
+        android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        style="@style/texts"
+        android:text="@string/inicio"
+        android:layout_gravity="center" />
+    <TextView
+        android:textColor="#521704"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="25sp"
         android:id="@+id/abrirayuda"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         style="@style/texts"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
         android:text="@string/ayuda"
         android:layout_gravity="center" />
 </LinearLayout>
