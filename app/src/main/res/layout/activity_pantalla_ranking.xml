@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".PantallaRanking">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/rankfondo"
+        android:scaleType="centerCrop"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/primero"
+        style="@style/texts"
+        android:text="1: -------------"
+        android:textSize="27sp"
+        android:textColor="#404040"
+        android:layout_marginLeft="78dp"
+        android:layout_marginTop="130sp"
+        />
+        <TextView
+            android:id="@+id/segundo"
+            style="@style/texts"
+            android:text="2: -------------"
+            android:textSize="27sp"
+            android:textColor="#404040"
+            android:layout_marginLeft="78dp"
+            android:layout_marginTop="30dp"
+            />
+        <TextView
+            android:id="@+id/tercero"
+            style="@style/texts"
+            android:text="3: -------------"
+            android:textSize="27sp"
+            android:textColor="#404040"
+            android:layout_marginLeft="78dp"
+            android:layout_marginTop="30dp"
+            />
+        <TextView
+            android:id="@+id/cuarto"
+            style="@style/texts"
+            android:text="4: -------------"
+            android:textColor="#404040"
+            android:textSize="27sp"
+            android:layout_marginLeft="78dp"
+            android:layout_marginTop="30dp"
+            />
+        <TextView
+            android:id="@+id/quinto"
+            style="@style/texts"
+            android:text="5: -------------"
+            android:textColor="#404040"
+            android:textSize="27sp"
+            android:layout_marginLeft="78dp"
+            android:layout_marginTop="30dp"
+            />
+
+
+    </LinearLayout>
+    <ImageButton
+        android:id="@+id/volver"
+        style="@style/Buttons"
+        android:layout_height="40dp"
+        android:layout_width="45sp"
+        android:layout_margin="40dp"
+        android:layout_gravity="center|bottom"
+        android:src="@drawable/casa"/>
+</FrameLayout>

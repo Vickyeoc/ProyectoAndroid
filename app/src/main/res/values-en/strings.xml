@@ -24,4 +24,12 @@
     <string name="carac">The username needs at least one character</string>
     <string name="noColores">There is colors missing</string>
     <string name="inicio">Return to home</string>
+    <string name="jugarvolver">Play again</string>
+    <string name="tiempo">Time\'s up!</string>
+    <string name="nologro">You coldn\'t crack the code.</string>
+    <string name="aceptar">Accept</string>
+    <string name="ganarrank">You made it into the leaderboard!</string>
+    <string name="ganarnorank">You didn\'t make it into the leaderboard.</string>
+    <string name="inte">Score:</string>
+    <string name="compartir">Share score</string>
 </resources>

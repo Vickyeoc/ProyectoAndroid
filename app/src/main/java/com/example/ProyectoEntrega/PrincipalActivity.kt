@@ -1,6 +1,7 @@
 package com.example.ProyectoEntrega
 
 import android.content.Intent
+import android.media.Image
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
@@ -34,6 +35,7 @@ val aceptarNombre= findViewById<ImageButton>(R.id.aceptarInicio)
 val nombre= findViewById<TextView>(R.id.nombre)
 val saludar =findViewById<TextView>(R.id.textView5)
 val ayuda =findViewById<ImageButton>(R.id.AyudaBoton)
+val rank =findViewById<ImageButton>(R.id.ranki)
 b= false
 
 /// BOTONES DE DIFICULTAS, SOLO SE ACCEDE SI SE INGRESO UN NUMBRE DE FORMA CORRECTA
@@ -79,7 +81,14 @@ aceptarNombre.setOnClickListener {
 ayuda.setOnClickListener {
     val i=Intent(this, Ayuda::class.java)
     startActivity(i) }
-    }
+
+//// BOTON PARA IR AL RANKING
+rank.setOnClickListener {
+    val i=Intent(this, PantallaRanking::class.java)
+        startActivity(i)}
+
+
+}
 
 /// SE GUARDAN LAS VARIABLES
 override fun onSaveInstanceState(outState: Bundle) {

@@ -1,7 +1,9 @@
 package com.example.ProyectoEntrega
 
 import android.R
+import android.content.Context
 import android.widget.ImageView
+import androidx.core.content.edit
 
 fun correctos(secreto: IntArray, intento: IntArray, max: Int): IntArray{
         var correcto= 0
@@ -39,6 +41,7 @@ fun reiniciarVector(vector: Array<ImageView>, max: Int): Array<ImageView> {
     }
     return vector;
 }
+
 
 
 

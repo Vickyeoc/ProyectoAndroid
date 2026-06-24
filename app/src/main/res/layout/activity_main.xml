@@ -45,14 +45,6 @@
 
 <TextView
     style="@style/texts"
-    android:id="@+id/gano"
-    android:layout_above="@+id/nombre"
-    android:text="@string/ganar"
-    android:layout_centerInParent="true"
-    android:visibility="gone"/>
-
-<TextView
-    style="@style/texts"
     android:id="@+id/acertados"
     android:layout_marginTop="5dp"
     android:layout_marginStart="5dp"

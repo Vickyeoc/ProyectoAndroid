@@ -27,5 +27,12 @@
     <string name="carac">El nombre de usuario tiene que tener al menos 1 caracter</string>
     <string name="noColores">Faltan colores</string>
     <string name="inicio">Volver al inicio</string>
-
+    <string name="jugarvolver">Volver a jugar</string>
+    <string name="tiempo">¡Tiempo agotado!</string>
+    <string name="nologro">No lograste descubrir el código.</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="ganarrank">Ingresaste al raking!</string>
+    <string name="ganarnorank">No ingresaste al ranking.</string>
+    <string name="inte">Intentos: </string>
+    <string name="compartir">Compartir puntaje</string>
 </resources>

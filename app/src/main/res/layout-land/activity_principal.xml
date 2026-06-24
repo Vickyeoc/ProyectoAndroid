@@ -13,7 +13,18 @@
         android:src="@drawable/landnubes"
         android:layout_height="match_parent"
         android:scaleType="centerCrop" />
-
+    <ImageButton
+        android:id="@+id/ranki"
+        style="@style/Buttons"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/rankin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.960"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.020" />
     <TextView
         android:id="@+id/titulo"
         style="@style/texts"
