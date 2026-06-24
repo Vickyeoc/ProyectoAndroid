@@ -53,9 +53,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
     val extras = intent.extras
     val nivel = extras?.getInt("dificultad")
     val n=extras?.getString("nombre")
-    val vistaperdio= layoutInflater.inflate(R.layout.popupperder, null)
-    val perder= AlertDialog.Builder(this)
-    val cartelperder=perder.create()
+
 
 //VECTORES DE IMAGENES, VECTOR PARA VER EL INTENTO ACTUAL Y VECTOR PARA VER EL INTENTO ANTERIOR.
     var vectorImagenes = arrayOf(
@@ -143,6 +141,28 @@ fun almacenar(nombre_jugador: String, puntaje: Int): Boolean {
     return b;
 }
 
+////CREO CARTEL AL PERDER
+    val vistaperdio= layoutInflater.inflate(R.layout.popupperder, null)
+    val perder= AlertDialog.Builder(this)
+    perder.setView(vistaperdio)
+    perder.setCancelable(false)
+    val cartelperder=perder.create()
+
+
+
+
+////CREO CARTEL AL GANAR
+    val vistagano=layoutInflater.inflate(R.layout.popupganar, null)
+    val gano= AlertDialog.Builder(this)
+    gano.setView(vistagano)
+    gano.setCancelable(false)
+    val cartelganar= gano.create()
+    val ganorank=vistagano.findViewById<TextView>(R.id.rank)
+    val ganonorank=vistagano.findViewById<TextView>(R.id.norank)
+    val cantint= vistagano.findViewById<TextView>(R.id.inten)
+    val compartir= vistagano.findViewById<TextView>(R.id.compartir)
+
+
 ///// INICIO EL TEMPORIZADOR SEGUN LA DIFICULTAD (T = TIEMPO X DIFICULTAD).
 
     var segs = t * 1000L
@@ -168,22 +188,12 @@ fun retry() {
     temporizador.cancel()
     tiempo.text = "00:$t"}
 
-////CARTEL AL PERDER
-    perder.setView(vistaperdio)
-    perder.setCancelable(false)
+//CONFIGURO CARTEL AL PERDER
     vistaperdio.findViewById<TextView>(R.id.iniciopop).setOnClickListener { finish(); cartelperder.dismiss() }
     vistaperdio.findViewById<TextView>(R.id.reiniciarpop).setOnClickListener { retry(); cartelperder.dismiss() }
 
 
-
-////CARTEL AL GANAR
-    val vistagano=layoutInflater.inflate(R.layout.popupganar, null)
-    val gano= AlertDialog.Builder(this)
-    gano.setView(vistagano)
-    gano.setCancelable(false)
-    val cartelganar= gano.create()
-    val ganorank=vistagano.findViewById<TextView>(R.id.rank)
-    val ganonorank=vistagano.findViewById<TextView>(R.id.norank)
+///// CONFIGURO CARTEL AL GANAR
     vistagano.findViewById<TextView>(R.id.iniciopop).setOnClickListener { finish(); cartelganar.dismiss()}
     vistagano.findViewById<TextView>(R.id.reiniciarpop).setOnClickListener { retry(); cartelganar.dismiss() }
     vistagano.findViewById<TextView>(R.id.aceptar).setOnClickListener {
@@ -192,28 +202,22 @@ fun retry() {
         cartelganar.dismiss()
         finish()
     }
-    val cantint= vistagano.findViewById<TextView>(R.id.inten)
-    val compartir= vistagano.findViewById<TextView>(R.id.compartir)
     compartir.setOnClickListener {
         val i= Intent(Intent.ACTION_SEND)
         i.type="text/plain"
-        i.putExtra(Intent.EXTRA_TEXT,"¡Adiviné el código en $cant intentos!")
+        i.putExtra(Intent.EXTRA_TEXT,"${getString(R.string.adivine)} $cant ${getString(R.string.`in`)}")
         if(i.resolveActivity(packageManager) != null){startActivity(i)}
         cartelganar.dismiss()
         finish()
     }
 
 
-
-
-
-
 //BOTON ENVIAR
 e.setOnClickListener {
     correcto = 0
     noCorrecto = 0
-    if (cant == 1) {temporizador.start()}// SI ES EL PRIMER INTENTO REINICIA TEMPORIZADOR
     if (i == max) {
+        if (cant == 1) {temporizador.start()}// SI ES EL PRIMER INTENTO REINICIA TEMPORIZADOR
         i = 0
 
         for (j in 0..<max) {vectorAnterior[j].setImageDrawable(vectorImagenes[j].drawable)}
