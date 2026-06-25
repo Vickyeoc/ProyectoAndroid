@@ -1,7 +1,6 @@
 package com.example.ProyectoEntrega
 
 import android.content.Intent
-import android.media.Image
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
@@ -12,10 +11,11 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+
+class PrincipalActivity : AppCompatActivity() {
 var texto=String()
 var b= false
 
-class PrincipalActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -101,7 +101,9 @@ override fun onSaveInstanceState(outState: Bundle) {
 override fun onRestoreInstanceState(savedInstanceState: Bundle) {
     super.onRestoreInstanceState(savedInstanceState)
     b=savedInstanceState.getBoolean("vista")
-    findViewById<TextView>(R.id.nombre).text= savedInstanceState.getString("texto")
+    texto = savedInstanceState.getString("texto") ?: ""
+
+    findViewById<TextView>(R.id.nombre).text= texto
     if(b) {
         findViewById<TextView>(R.id.nombre).visibility= View.VISIBLE
         findViewById<TextView>(R.id.textView5).visibility=View.VISIBLE}

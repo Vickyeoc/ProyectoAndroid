@@ -12,8 +12,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.transition.Visibility
 import androidx.core.content.edit
-
 data class RegistroRanking(val nombre: String, val puntaje: Int)
+
 class PantallaRanking : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,7 +46,7 @@ class PantallaRanking : AppCompatActivity() {
             vector[i] = RegistroRanking(nombreGuardado, puntajeGuardado)
         }
 
-///////Los puestos que tienen a alguien almacenado se muestran y sino no
+///////Se muestra en el puesto lo que esta guardado en el disco, si el puesto tiene a alguien guardado se cambia por ese alguien
         for (i in 0..4){
             if(vector[i].puntaje!= valorAlto){
                 ids[i].text=" ${i+1}: ${vector[i].nombre}, ${vector[i].puntaje}"
